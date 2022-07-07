@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@400;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body {
+    background-color: #F4FAFF;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+.wrapper {
+    display: flex;
+}
+.left {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    width: 15%;
+    height:100vh ;
+    padding: 10px 0px;
+    box-shadow: 7px 1px 11px -5px rgba(0,0,0,0.71);
+    -webkit-box-shadow: 7px 1px 11px -5px rgba(0,0,0,0.71);
+    -moz-box-shadow: 7px 1px 11px -5px rgba(0,0,0,0.71);
+    z-index: 100000;
+}
+.left .logo {
+    width: 100%;
+}
+#left-ico {
+    position: relative;
+    top: 4px;
+    margin: 0 8px 0 0;
+}
+.links {
+    margin: 30px 0 0 0px;
+}
+.links a,.config a {
+    padding: 10px 30px;
+    color: #1A7EBD;
+    font-weight: 500;
+}
+.links li {
+    padding: 15px 0;
+}
+.active {
+    background-color: #1A7EBD;
+}
+.config {
+    margin: 120px 0 0 0px;
+}
+.config li {
+    padding: 5px 0;
+}
+.right {
+    width: 85%;
+}
+.header {
+    width: 100%;
+    min-height: 200px;
+    background-image: url(../icons/Rectangle\ 472.png);
+    background-position: top;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px;
+}
+.header h3 {
+    color: #fff;
+}
+
+.user{
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.user img {
+    margin: 0 10px 0 0;
+}
+.name {
+    margin-top: 10px;
+}
+.icon {
+    position: relative;
+    top: 60px;
+    right: 30px;
+}
+.indicator {
+    background-color: red;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    position: relative;
+    left: 10px;
+    bottom: 5px;
+    z-index: 10;
+}
+#bell {
+    position: relative;
+    bottom: 20px;
+}
+.dashboard {
+    display: flex;
+    padding: 0px 30px;
+    position: relative;
+    bottom: 25px;
+}
+.board-left {
+    width: 75%;
+}
+.row {
+    display: flex;
+    padding: 0 30px;
+}
+.box {
+    width:25%;
+    padding: 20px 60px 30px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 30px 20px 0;
+    box-shadow: 7px 1px 11px -5px rgba(0,0,0,0.71);
+    -webkit-box-shadow: 7px 1px 11px -5px rgba(0,0,0,0.71);
+    -moz-box-shadow: 7px 1px 11px -5px rgba(0,0,0,0.71);
+}
+.box img {
+    margin-bottom: 40px;
+}
+.board-right {
+    width: 25%;
+}
+.card {
+    background: linear-gradient(to bottom right, #1A7EBD , rgba(5, 26, 43, 0.822)),url(../icons/mask-group.png);
+    background-position: center;
+    background-size: contain;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 0;
+    padding: 40px 40px;
+    color: #fff;
+    border-radius: 10px;
+
+}
+.transactions {
+    padding: 20px 50px;
+    width: 100%;
+    display: flex;
+}
+.credits {
+    width: 45%;
+}
+.debits {
+    width: 45%;
+    margin-left: 20px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color:#1A7EBD;
+    border-radius: 10px 10px 0 0;
+  }
+
+th {	
+    color:#fff;
+}
+th, td {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+td {
+    background-color:white;
+}
+#green {
+    color: #15A653;
+}
+#red {
+    color:#FA222F;
+}
+.acct-statement {
+    margin: 20px 0 0 0;
+    display: flex;
+    justify-content: flex-end;
+}
+.acct-statement .refresh {
+    margin: 10px 0 0 20px;
+    cursor: pointer;
+}
+.acct-statement a {
+    background-color: #1A7EBD;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 7px 1px 11px -5px rgba(0,0,0,0.71);
+    -webkit-box-shadow: 7px 1px 11px -5px rgba(0,0,0,0.71);
+    -moz-box-shadow: 7px 1px 11px -5px rgba(0,0,0,0.71);
+}
+.burger div {
+    border-radius: 3px;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    z-index: 11;
+    transition: all ease-out 0.3s;
+}
+.burger div:nth-child(2) {
+    width: 40px;
+}
+.burger {
+    display: none;
+    cursor: pointer;
+    z-index: 1000000;
+}
+
+/*media queries: mobile devices(phone)*/
+
+@media screen and (max-width: 770px) {
+    .header {
+        flex-direction: row;
+    }
+    .user {
+        flex-direction: row;
+    }
+    .left {
+        position: absolute;
+        width: 50%;
+        height: 100vh;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-out;
+    }
+    .right {
+        width: 100%;
+    }
+    .dashboard {
+        flex-direction: column-reverse;
+    }
+    .board-left {
+        width: 100%;
+    }
+    .board-right {
+        width: 100%;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .box {
+        width: 100%;
+        cursor: pointer;
+        text-align: center;
+    }
+    .transactions {
+        flex-direction: column;
+    }
+    .credits, .debits {
+        width: 100%;
+        margin: 10px 40px 10px 0;
+    }
+    .acct-statement {
+        margin: 20px 80px;
+    }
+    .card {
+        margin: 0 40px;
+    }
+    .row {
+        margin: 0px 40px;
+    }
+    .box {
+        padding: 60px 60px;
+    }
+     .name, .icon {
+        display: none;
+    }
+    .burger {
+        display: block;
+    }
+}
+
+.left-active {
+    transform: translateX(0%);
+    transition: transform 0.3s ease-out;
+}
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0px;
+    z-index: 1000;
+    transition: ease-out 0.2s;
+}
+
+
+/*media queries: tablets(phone)*/
+@media screen and (max-width: 1224px) {
+    .header {
+        flex-direction: row;
+    }
+    .user {
+        flex-direction: row;
+    }
+    .left {
+        position: absolute;
+    }
+    .right {
+        width: 100%;
+    }
+    .dashboard {
+        flex-direction: column-reverse;
+    }
+    .board-left {
+        width: 100%;
+    }
+    .board-right {
+        width: 100%;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .box {
+        width: 100%;
+        cursor: pointer;
+        text-align: center;
+    }
+    .transactions {
+        flex-direction: column;
+    }
+    .credits, .debits {
+        width: 100%;
+        margin: 10px 40px 10px 0;
+    }
+    .acct-statement {
+        margin: 20px 80px;
+    }
+    .card {
+        margin: 0 40px;
+    }
+    .row {
+        margin: 0px 40px;
+    }
+    .box {
+        padding: 60px 60px;
+    }
+     .user img, .name, .icon {
+        display: none;
+    }
+    .burger {
+        display: block;
+    }
+}
+
+@keyframes linkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-8px,-2px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-12px,-3px);
+
+}
+
